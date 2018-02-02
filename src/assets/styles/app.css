@@ -1,0 +1,95 @@
+@import 'normalize.css/normalize.css';
+@import './lib/bootstrap-grid-3.3.1.min.css';
+@import './fonts.css';
+
+$main-color: #23133E;
+$accent-color: #FFCC00;
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto\9;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.5 ;
+  font-family: "RobotoRegular", sans-serif;
+  overflow-x: hidden;
+  color: #111111;
+}
+
+.hidden {
+  display: none;
+}
+
+strong, b {
+  font-family: "RobotoBold", sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .button {
+  font-family: "RobotoCondensedBold", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.top-line {
+  background-color: $main-color;
+  text-align: center;
+  & a {
+    color: #ffffff;
+    
+    & span {
+      font-size: 9px;
+    }
+  }
+  & ul, li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  & li {
+    display: inline-block;
+    padding: 25px;
+  }
+}
+
+.submenu .submenu_li {
+  display: block;
+}
+
+.topmenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  width: 15%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  display: none;
+  background-color: $main-color;
+}
+
+.top-line ul li:hover .submenu {
+  display: block;
+}
+
+.top-line ul li a:hover {
+    color: $accent-color;
+    background-color: #1c0d34;
+}
+
